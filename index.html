@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
-
+    <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -25,13 +25,24 @@
  <!------------------------------------------------------------------------------ HEADER --------------------------------------------------------->
 
  <body>
-      <header>
+    <header>
         <a href="index.html">IOANNIS E</a>
-        <a href="#">WORK</a>
-        <a href="about.html"> ABOUT</a>
-  </a>
-            
-</header>
+        <a href="#" id="work-btn">WORK</a>
+        <a href="about.html">ABOUT</a>
+      </header>
+      
+      <!-- Fullscreen Overlay Navigation -->
+      <div id="nav-overlay">
+        <nav>
+          <a href="#">Graphic Design</a>
+          <a href="#">Programming</a>
+          <a href="#">Websites</a>
+          <a href="#">Video Graphics</a>
+          <a href="#">UI/UX Design</a>
+          <a href="#" id="photography-link">Photography</a>
+        </nav>
+        <button id="close-btn">✕</button>
+      </div>
 
     
     <div class ="container">
@@ -57,4 +68,28 @@
 </footer>
 
 </body>
+<script>
+    const workBtn = document.getElementById('work-btn');
+    const overlay = document.getElementById('nav-overlay');
+    const closeBtn = document.getElementById('close-btn');
+    const photographyLink = document.getElementById('photography-link');
+  
+    workBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      overlay.classList.add('show');
+    });
+  
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('show');
+    });
+  
+    // 🎯 Toggle close button color on hover of Photography link
+    photographyLink.addEventListener('mouseenter', () => {
+      closeBtn.classList.add('black');
+    });
+  
+    photographyLink.addEventListener('mouseleave', () => {
+      closeBtn.classList.remove('black');
+    });
+  </script>
 </html>
