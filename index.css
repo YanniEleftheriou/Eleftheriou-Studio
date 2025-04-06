@@ -163,6 +163,7 @@ footer {
         flex-direction:column;
         justify-content:center;
         gap:20px;
+        overscroll-y:scroll;
       }
     
       .menu {
