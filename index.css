@@ -2,7 +2,7 @@
     font-family: 'PPultralight';
     src: url('fonts/PPTelegraf-Ultralight.otf') format('opentype');
     font-weight: 300;
-    font-style: thin;
+    font-style: normal;
   }
   @font-face {
     font-family: 'PPregular';
